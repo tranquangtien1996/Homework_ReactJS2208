@@ -17,3 +17,10 @@ if(flag){
 } else {
     console.log('NO');
 }
+
+// let k = 135;
+// let convertK = k + '';
+// for (let index = 0; index < convertK.length; index++) {
+//     parseInt(convertK[index], 10)
+    
+// }
