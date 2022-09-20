@@ -55,7 +55,7 @@ students = [
 
 const sortArray = array => {
     return array.sort((a, b) => {
-        // if (a.firstName == b.firstName) {
+        // if (a.firstName === b.firstName) {
         //     return 0;
         // } else if (a.firstName > b.firstName) {
         //     return 1;
