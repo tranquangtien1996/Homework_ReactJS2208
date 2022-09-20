@@ -20,7 +20,7 @@ const checkNumber = (m, k) =>  {
             break;
         }
     }
-    return `phan tu co khoang cach gan nhat voi ${k} la ${min}`
+    return `Phần tử có khoảng cách gần nhất với ${k} là ${min}`
 }
 
 let a = [1, 2, 3, 4, 6, 7];

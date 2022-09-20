@@ -42,17 +42,22 @@ students = [
         }
     ];
 
-const checkName = (a, b) => {
-    // if ( a.toLowerCase().indexOf(b.toLowerCase() + " ") === 0) {
-    //     return true;
-    // }
-    if (a.slice(0,2) === b) {
-        return true;
-    }
-}
+// const checkName = (a, b) => {
+//     // if ( a.toLowerCase().indexOf(b.toLowerCase() + " ") === 0) {
+//     //     return true;
+//     // }
+//     if (a.slice(0,2) === b) {
+//         return true;
+//     }
+// }
 
-students.map(item => {
-    if (checkName(item.lastName, 'Do')) {
-        console.log(item);
-    }
-})
+// students.map(item => {
+//     if (checkName(item.lastName, 'Do')) {
+//         console.log(item);
+//     }
+// })
+
+let result = students.filter(item => {
+    return item.lastName.indexOf('Do') >= 0;
+});
+console.log(result);
