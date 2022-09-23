@@ -133,12 +133,45 @@ const findMaxEntryPoint = () => {
 
 }
 
-//.Hiển thị danh sách học sinh bị cảnh cáo ( điểm trung bình < 4)
+//8.Hiển thị danh sách học sinh bị cảnh cáo ( điểm trung bình < 4)
 const findStuWarned = () => {
     let lstStudent = student.filter((item) => {
         return item.averagePoint < 4;
     });
     console.log('List students be warned: ');
+    console.log(lstStudent);
+    yourSelect = 0;
+}
+
+//9. Sắp xếp học sinh theo bảng chữ cái
+const sortByAlpha = () => {
+    let lstStudent = student.sort((a,b) => {
+        return a.name.localeCompare(b.name);
+    });
+    console.log('Sort by Alphabetically: ');
+    saveData();
+    console.log(lstStudent);
+    yourSelect = 0;
+}
+
+//10. Sắp xếp học sinh theo điểm trung bình tăng dần
+const sortByPoint = () => {
+    let lstStudent = student.sort((a,b) => {
+        return a.averagePoint - b.averagePoint;
+    });
+    console.log('Sort by Average point ascending:');
+    saveData();
+    console.log(lstStudent);
+    yourSelect = 0;
+}
+
+//11.Sắp xếp học sinh theo tuổi tăng dần 
+const sortByAge = () => {
+    let lstStudent = student.sort((a,b) => {
+        return a.age - b.age;
+    });
+    console.log('Sort by Age:');
+    saveData();
     console.log(lstStudent);
     yourSelect = 0;
 }
@@ -173,6 +206,15 @@ while (true) {
             break; 
         case 8:
             findStuWarned();
+            break; 
+        case 9:
+            sortByAlpha();
+            break; 
+        case 10:
+            sortByPoint();
+            break; 
+        case 11:
+            sortByAge();
             break; 
         case 12:
             process.exit();
